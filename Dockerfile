@@ -10,7 +10,7 @@ COPY . .
 RUN npm run build
  
 # --------------> The production image
-FROM nginx:1.23.3-alpine as production
+FROM nginxinc/nginx-unprivileged:1.25.3 as production
 ENV NODE_ENV production
 # Copy built assets from `builder` image
 COPY --from=builder /app/build/ /usr/share/nginx/html/
