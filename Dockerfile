@@ -4,7 +4,7 @@ ARG NPM_TOKEN
 WORKDIR /app
 COPY package*.json ./
 RUN echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc && \
-   npm ci --only=production && \
+   npm ci --omit=dev && \
    rm -f .npmrc
 COPY . .
 RUN npm run build
