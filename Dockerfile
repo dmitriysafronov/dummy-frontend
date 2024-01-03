@@ -1,5 +1,5 @@
 # --------------> The build image
-FROM node:18.12.1 AS builder
+FROM node:20.10.0 AS builder
 ARG NPM_TOKEN
 WORKDIR /app
 COPY package*.json ./
