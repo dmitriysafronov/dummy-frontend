@@ -15,7 +15,6 @@ ARG NPM_TOKEN
 RUN echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc && \
    npm ci --omit=dev && \
    rm -f .npmrc && \
-   npx update-browserslist-db@latest
 # Build app
 COPY . .
 RUN npm run build
