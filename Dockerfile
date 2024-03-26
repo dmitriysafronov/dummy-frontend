@@ -1,18 +1,21 @@
 # VERSIONS
 ARG NODE_VERSION=20.11.1
-ARG NPM_VERSION=10.4.0
 ARG NGINX_VERSION=1.25.4
 
 # --------------> The builder image
 FROM node:$NODE_VERSION AS builder
 ENV NODE_ENV production
 WORKDIR /app
-ARG NPM_TOKEN
+# Install NPM with version
+ARG NPM_VERSION=10.5.0
+RUN npm install -g npm@$NPM_VERSION
+# Install dependencies
 COPY package*.json ./
+ARG NPM_TOKEN
 RUN echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc && \
-   npm install -g npm@$NPM_VERSION && \
    npm ci --omit=dev && \
    rm -f .npmrc
+# Build app
 COPY . .
 RUN npm run build
  
