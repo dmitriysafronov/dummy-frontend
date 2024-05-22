@@ -1,13 +1,13 @@
 # VERSIONS
-ARG NODE_VERSION=20.11.1
-ARG NGINX_VERSION=1.25.4
+ARG NODE_VERSION=20.13.1
+ARG NGINX_VERSION=1.26.0
 
 # --------------> The builder image
 FROM node:$NODE_VERSION AS builder
 ENV NODE_ENV production
 WORKDIR /app
 # Install NPM with version
-ARG NPM_VERSION=10.5.0
+ARG NPM_VERSION=10.8.0
 RUN npm install -g npm@$NPM_VERSION
 # Install dependencies
 COPY package*.json ./
