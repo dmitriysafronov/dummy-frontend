@@ -4,7 +4,7 @@ ARG NGINX_VERSION=1.26.0
 
 # --------------> The builder image
 FROM node:$NODE_VERSION AS builder
-ENV NODE_ENV production
+ENV NODE_ENV=production
 WORKDIR /app
 # Install NPM with version
 ARG NPM_VERSION=10.8.0
