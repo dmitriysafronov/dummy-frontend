@@ -2,6 +2,6 @@
 *
 
 # ...except essential
-!/public
-!/src
+!.eslintrc.json
+!index.js
 !package*.json
