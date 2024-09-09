@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.24] - 2024-09-09
+
+### 🐛 Bug Fixes
+
+- DCO for update-browserlist-db.yaml (#105)
+
 ## [0.0.22] - 2024-08-27
 
 ### 🐛 Bug Fixes
