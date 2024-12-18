@@ -13,5 +13,4 @@ RUN npm run build
 
 # --------------> The production image
 FROM nginxinc/nginx-unprivileged:1.26.0 AS production
-RUN rm -rf /usr/share/nginx/html/*
 COPY --from=builder /app/build/ /usr/share/nginx/html/
