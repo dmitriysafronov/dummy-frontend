@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.48] - 2024-12-18
+
+### 🚜 Refactor
+
+- Dockerfile with versions for Dependabot
+
 ## [0.0.47] - 2024-12-16
 
 ### 🚜 Refactor
