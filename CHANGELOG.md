@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.49] - 2024-12-18
+
+### 🚜 Refactor
+
+- Remove unused
+- Dockerfile
+
 ## [0.0.48] - 2024-12-18
 
 ### 🚜 Refactor
