@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.51] - 2024-12-19
+
+### 🚜 Refactor
+
+- Dockerignore
+
 ## [0.0.50] - 2024-12-19
 
 ### 🚜 Refactor
