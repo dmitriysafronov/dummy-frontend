@@ -2,7 +2,6 @@
 FROM node:23.4.0 AS builder
 ENV NODE_ENV=production
 WORKDIR /app
-RUN npm install -g npm@10.8.0
 ARG NPM_TOKEN
 COPY package*.json ./
 RUN echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc && \
