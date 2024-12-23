@@ -1,5 +1,5 @@
 # --------------> The builder image
-FROM node:23.4.0 AS builder
+FROM node:23.5.0 AS builder
 ENV NODE_ENV=production
 WORKDIR /app
 ARG NPM_TOKEN
