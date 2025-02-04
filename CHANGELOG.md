@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.56] - 2025-02-04
+
+### 🚜 Refactor
+
+- Update Browserslist db
+
 ## [0.0.55] - 2025-01-30
 
 ### 🚜 Refactor
