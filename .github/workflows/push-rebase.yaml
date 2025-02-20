@@ -11,7 +11,7 @@ jobs:
     name: Push [rebase]
     runs-on: ubuntu-latest
     steps:
-      - name: Rebase all pull requests on push to the main branch
+      - name: "Rebase all users' pull requests on push to the main branch"
         uses: peter-evans/rebase@v3.1.0
         with:
           base: main
@@ -19,4 +19,9 @@ jobs:
           exclude-labels: |
             no-rebase
             dependencies
+        if: "${{ startsWith(github.event.head_commit.message, 'docs: update changelog for ') }}"
+      - name: "Rebase all Dependabot's pull requests on push to the main branch"
+        uses: bbeesley/gha-auto-dependabot-rebase@v1.5.92
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
         if: "${{ startsWith(github.event.head_commit.message, 'docs: update changelog for ') }}"
