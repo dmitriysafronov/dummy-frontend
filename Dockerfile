@@ -1,5 +1,5 @@
 # The builder image
-FROM node:23.10.0 AS builder
+FROM node:23.11.0 AS builder
 ENV NODE_ENV=production
 WORKDIR /app
 RUN --mount=type=bind,source=package.json,target=package.json \
